@@ -4,7 +4,7 @@
   * [name of project](deployed url)
   * [Codebase](link to git repo)
 
-* Alexandra Kruse
+* Alexandra Southwell
   * [name of project](deployed url)
   * [Codebase](link to git repo)
 
