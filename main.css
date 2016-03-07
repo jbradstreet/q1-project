@@ -1,0 +1,29 @@
+header {
+  background-color: grey;
+  text-align: right;
+  padding-right: 30px;
+  height: 50px;
+  position: relative;
+}
+
+header h2 {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+navbar {
+  margin: auto;
+  height: 300px;
+  width: 100%;
+  text-align: center;
+
+}
+
+a {
+  display: inline-block;
+  height: 30px;
+  width: 100px;
+  border: 1px solid black;
+  padding-top: 10px;
+  text-decoration: none;
+  /*padding: 20px;*/
+}
