@@ -8,6 +8,9 @@
 
     <link type="text/css" rel='stylesheet' href='main.css'/>
 
+    <script src="https://code.jquery.com/jquery-2.2.1.js"></script>
+	<script src="script.js"></script>
+
   </head>
   <body>
 
@@ -23,18 +26,19 @@
 
     <h3>What Am I Watching?</h3>
 
-    <form>
-      <input type='text'></input>
+    <form action='index.html' method='get'>
+      <input type='text' name='q' id='searchIt'></input>
+      <button type='submit' value='submit' id='submitIt'>SUBMIT</button>
 
     </form>
 
     <form>
-      <button type='submit'>SUBMIT</button>
       <button type='submit'>Popular</button>
       <button type='submit'>Trending</button>
     </form>
 
-
+    <div class='container'>
+    </div>
 
   </body>
 </html>
