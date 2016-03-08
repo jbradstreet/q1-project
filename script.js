@@ -24,15 +24,21 @@ $(document).ready(function() {
           success: function(episodeData) {
 
             // get the data I want to display
-            // $.each(episodeData, function(test) {
-            //
-            //
-            // })
+            $.each(episodeData, function(key, value) {
+              // console.log(value.image.medium, value.season, value.number, value.summary);
 
-            // display the data
-            var $output = $('#displayIt');
-              $output.html(JSON.stringify(episodeData));
-              console.log(episodeData);
+              // display the data
+              console.log(value.image);
+              var $output = $('#displayIt');
+              console.log(value)
+              $output.append($('<div class="episode"><img src=' + value.image.original + '></div>'));
+              $output.append(value.summary);
+                // $output.html(JSON.stringify(episodeData));
+                // console.log(episodeData);
+
+            });
+
+
           }
         });
 
