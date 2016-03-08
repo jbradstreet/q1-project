@@ -2,6 +2,7 @@ $(document).ready(function() {
 
   var userInput = '';
   var showIdNumber = '';
+  var imageSource = '';
 
 
   $('#submitIt').click(function(e) {
@@ -15,11 +16,27 @@ $(document).ready(function() {
       url:'http://api.tvmaze.com/singlesearch/shows?q=' + userInput,
       method: 'GET',
       success: function(data) {
-        console.log(data);
-        // get data I want to display on website
-        var $test = $('#displayIt');
-        $test.html(JSON.stringify(data.image.medium));
-        console.log($test);
+
+        // add tv show id to another api search
+        $.ajax({
+          url: 'http://api.tvmaze.com/shows/' + data.id + '/episodes',
+          method: 'GET',
+          success: function(episodeData) {
+
+            // get the data I want to display
+            // $.each(episodeData, function(test) {
+            //
+            //
+            // })
+
+            // display the data
+            var $output = $('#displayIt');
+              $output.html(JSON.stringify(episodeData));
+              console.log(episodeData);
+          }
+        });
+
+
       },
       error: function (data) {
         console.log('error', data);
