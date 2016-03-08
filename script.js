@@ -25,16 +25,38 @@ $(document).ready(function() {
 
             // get the data I want to display
             $.each(episodeData, function(key, value) {
-              // console.log(value.image.medium, value.season, value.number, value.summary);
+
+            // make framework for data outpout
+            var $newRow = $('.row.template').clone().removeClass('template');
+
+
+            var $imageOutput = $newRow.find('.episodeImage');
+            console.log(value)
+            $imageOutput.append($('<img src=' + value.image.medium + '>'));
+
+            var  $episodeOutput = $newRow.find('.episodeDetails');
+            $episodeOutput.append($('<h3>' + value.name + '</h3>'));
+            $episodeOutput.append($('<h5>' + value.airdate + '</h5>'));
+            $episodeOutput.append($('<p>' + value.summary + '<p>'));
+
+            $('#displayIt').append($newRow);
+
+
+
+
 
               // display the data
-              console.log(value.image);
-              var $output = $('#displayIt');
-              console.log(value)
-              $output.append($('<div class="episode"><img src=' + value.image.medium + '></div>'));
-              $output.append(value.name);
-              $output.append(value.number);
-              $output.append(value.summary);
+              // var $imageOutput = $('.episodeImage');
+              // console.log(value)
+              // $imageOutput.append($('<img src=' + value.image.medium + '>'));
+
+              // var  $episodeOutput = $('.episodeDetails');
+              // $episodeOutput.append($('<h3>' + value.name + '</h3>'));
+              // $episodeOutput.append($('<h5>' + value.airdate + '</h5>'));
+              // $episodeOutput.append($('<p>' + value.summary + '<p>'));
+              // $output.append(value.name);
+              // $output.append(value.number);
+              // $output.append(value.summary);
 
                 // $output.html(JSON.stringify(episodeData));
                 // console.log(episodeData);
