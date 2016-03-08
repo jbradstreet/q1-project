@@ -31,8 +31,12 @@ $(document).ready(function() {
               console.log(value.image);
               var $output = $('#displayIt');
               console.log(value)
-              $output.append($('<div class="episode"><img src=' + value.image.original + '></div>'));
+              $output.append($('<div class="episode"><img src=' + value.image.medium + '></div>'));
+              $output.append(value.name);
+              $output.append(value.season);
+              $output.append(value.number);
               $output.append(value.summary);
+
                 // $output.html(JSON.stringify(episodeData));
                 // console.log(episodeData);
 
