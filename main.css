@@ -27,3 +27,10 @@ a {
   text-decoration: none;
   /*padding: 20px;*/
 }
+
+#displayIt {
+  height: 500px;
+  width: 700px;
+  border: 1px solid black;
+
+}
