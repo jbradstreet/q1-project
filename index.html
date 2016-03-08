@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link href='https://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
 
     <meta charset="utf-8">
-    <title>What Am I Watching?</title>
+    <title>What The *** Am I Watching?</title>
 
     <link type="text/css" rel='stylesheet' href='main.css'/>
+
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
     <script src="https://code.jquery.com/jquery-2.2.1.js"></script>
 	<script src="script.js"></script>
@@ -14,28 +23,39 @@
   </head>
   <body>
 
-    <header>
-      <h2>Username Here</h2>
-    </header>
+    <div class='conatiner'>
+      <nav class='row'>
+        <h2>What The **** Am I Watching?</h2>
+      </nav>
+    </div>
 
-    <navbar>
-      <a href='#'>Home</a>
-      <a href='#'>About</a>
-      <a href='#'>My List</a>
-    </navbar>
+    <div class='container' id='topButtons'>
+      <div class='row'>
+        <div class='col-md-4'><a class='btn btn-default' href='#'>Home</a></div>
+        <div class='col-md-4'><a class='btn btn-default' href='#'>About</a></div>
+        <div class='col-md-4'><a class='btn btn-default' href='#'>My List</a></div>
+      </div>
+    </div>
 
-    <h3>What Am I Watching?</h3>
+    <div class='container'>
+      <div class='row'>
 
-    <form action='index.html' method='get'>
-      <input type='text' name='q' id='searchIt'></input>
-      <button type='submit' value='submit' id='submitIt'>SUBMIT</button>
+        <div class='col-md-6 col-md-offset-3' id="middleSection">
+          <h3>Possibly some text here?</h3>
 
-    </form>
+          <form action='index.html' method='get'>
+            <input type='text' name='q' id='searchIt'></input><br>
+            <button type='submit' value='submit' id='submitIt'>SUBMIT</button>
+          </form>
 
-    <form>
-      <button type='submit'>Popular</button>
-      <button type='submit'>Trending</button>
-    </form>
+          <form>
+            <button type='submit'>Popular</button>
+            <button type='submit'>Trending</button>
+          </form>
+
+        </div>
+      </div>
+    </div>
 
     <div class='container' id='displayIt'>
     </div>
