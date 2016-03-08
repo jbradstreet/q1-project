@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
   var userInput = '';
+  var showIdNumber = '';
 
 
   $('#submitIt').click(function(e) {
@@ -15,11 +16,17 @@ $(document).ready(function() {
       method: 'GET',
       success: function(data) {
         console.log(data);
+        // get data I want to display on website
+        var $test = $('#displayIt');
+        $test.html(JSON.stringify(data));
+        console.log($test);
       },
       error: function (data) {
         console.log('error', data);
       }
     });
+
+
   });
 
 });
