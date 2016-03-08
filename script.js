@@ -18,7 +18,7 @@ $(document).ready(function() {
         console.log(data);
         // get data I want to display on website
         var $test = $('#displayIt');
-        $test.html(JSON.stringify(data));
+        $test.html(JSON.stringify(data.image.medium));
         console.log($test);
       },
       error: function (data) {
