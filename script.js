@@ -12,6 +12,9 @@ $(document).ready(function() {
     userInput = $('#searchIt').val();
     console.log(userInput);
 
+    // make container for data visible
+    $('#displayIt').css('visibility', 'visible');
+
     $.ajax({
       url:'http://api.tvmaze.com/singlesearch/shows?q=' + userInput,
       method: 'GET',
@@ -41,33 +44,9 @@ $(document).ready(function() {
 
             $('#displayIt').append($newRow);
 
-
-
-
-
-              // display the data
-              // var $imageOutput = $('.episodeImage');
-              // console.log(value)
-              // $imageOutput.append($('<img src=' + value.image.medium + '>'));
-
-              // var  $episodeOutput = $('.episodeDetails');
-              // $episodeOutput.append($('<h3>' + value.name + '</h3>'));
-              // $episodeOutput.append($('<h5>' + value.airdate + '</h5>'));
-              // $episodeOutput.append($('<p>' + value.summary + '<p>'));
-              // $output.append(value.name);
-              // $output.append(value.number);
-              // $output.append(value.summary);
-
-                // $output.html(JSON.stringify(episodeData));
-                // console.log(episodeData);
-
             });
-
-
           }
         });
-
-
       },
       error: function (data) {
         console.log('error', data);
