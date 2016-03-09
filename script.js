@@ -12,7 +12,7 @@ $(document).ready(function() {
     userInput = $('#searchIt').val();
     console.log(userInput);
 
-    // make container for data visible
+    // make container for data visible !!!!
     $('#displayIt').css('visibility', 'visible');
 
     $.ajax({
@@ -40,6 +40,7 @@ $(document).ready(function() {
             var  $episodeOutput = $newRow.find('.episodeDetails');
             $episodeOutput.append($('<h3>' + value.name + '</h3>'));
             $episodeOutput.append($('<h5>' + value.airdate + '</h5>'));
+            $episodeOutput.append($("<button type='submit' class='addIt'>" + 'Add it!' + '</button>'));
             $episodeOutput.append($('<p>' + value.summary + '<p>'));
 
             $('#displayIt').append($newRow);
