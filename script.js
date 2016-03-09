@@ -4,6 +4,7 @@ $(document).ready(function() {
   var showIdNumber = '';
   var imageSource = '';
   var storedData = '';
+  var countClicks = 0;
 
 
   $('#submitIt').click(function(e) {
@@ -48,9 +49,14 @@ $(document).ready(function() {
 
               // capture data of section where I click "add it"
               $newRow.find('.addIt').click(function(event) {
-                storedData = $episodeOutput.clone();
-                $('.appendHere').append(storedData);
-
+                countClicks++;
+                console.log(countClicks);
+                // storedData = $episodeOutput.clone();
+                // $('.appendHere').append(storedData);
+                  if (document.getElementsByClassName('targetInput').value == true ){
+                    console.log('checked the box!');
+                    // $('p').css('display', 'hidden');
+                  }
 
               });
 
