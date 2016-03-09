@@ -62,6 +62,7 @@ form {
   width: 1000px;
   height: 300px;
   border: 1px solid black;
+  background: #F4F4F4;
 }
 
 #searchIt {
