@@ -46,24 +46,26 @@ $(document).ready(function() {
 
               $('#displayIt').append($newRow);
 
-
-              // capture data of section where I click "add it"
-              $newRow.find('.addIt').click(function(event) {
-                countClicks++;
-                console.log(countClicks);
-                // storedData = $episodeOutput.clone();
+              var clickHandler = function(event) {
+                storedData = $episodeOutput.clone();
                 // $('.appendHere').append(storedData);
-                  if (document.getElementsByClassName('targetInput').value == true ){
-                    console.log('checked the box!');
-                    // $('p').css('display', 'hidden');
-                  }
 
-              });
+                var $newForm = $('.anotherTemplate.copy').clone().removeClass('copy');
+
+                $('#revealIt article').append($newForm);
+                $newForm.find('p').append(storedData);
+                $newForm.find('input').click(function() {
+                  $newForm.remove();
+                  $newRow.find('.addIt').click(clickHandler);
+                });
+                $newRow.find('.addIt').off('click', clickHandler);
+              }
+
+              $newRow.find('.addIt').click(clickHandler);
 
             });
 
-
-
+              // if ( $('p').closest('input') )
 
 
 
