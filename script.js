@@ -56,6 +56,7 @@ $(document).ready(function() {
                 $newForm.find('p').append(storedData);
                 $newForm.find('input').click(function() {
                   $newForm.remove();
+                  // add this next line to allow same episode to be clicked again
                   $newRow.find('.addIt').click(clickHandler);
                 });
                 $newRow.find('.addIt').off('click', clickHandler);
@@ -64,10 +65,6 @@ $(document).ready(function() {
               $newRow.find('.addIt').click(clickHandler);
 
             });
-
-              // if ( $('p').closest('input') )
-
-
 
           }
         });
