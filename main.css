@@ -60,11 +60,15 @@ form {
 #revealIt {
   margin-top: 20px;
   width: 1000px;
-  /*height: 300px;*/
   border: 1px solid black;
   background: #F4F4F4;
   /*font-family: 'Special Elite', cursive;*/
 }
+
+.anotherTemplate {
+  padding-left: 20px;
+}
+
 
 #searchIt {
   margin-bottom: 20px;
