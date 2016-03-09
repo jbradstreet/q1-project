@@ -64,6 +64,7 @@ $(document).ready(function() {
 
               $newRow.find('.addIt').click(clickHandler);
 
+
             });
 
           }
@@ -73,6 +74,14 @@ $(document).ready(function() {
         console.log('error', data);
       }
     });
+
+
+  });
+
+  $('.myList, .midbuttons').click(function (something) {
+    // something.preventDefault();
+    // make container for My List visible !!!!
+    $('#revealIt').css('visibility', 'visible');
 
 
   });

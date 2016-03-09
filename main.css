@@ -59,6 +59,7 @@ form {
 
 #revealIt {
   margin-top: 20px;
+  margin-bottom: 20px;
   width: 1000px;
   border: 1px solid black;
   background: #F4F4F4;
@@ -73,6 +74,10 @@ form {
 #searchIt {
   margin-bottom: 20px;
   margin-left: 40px;
+}
+
+#revealIt {
+  visibility: hidden;
 }
 
 #displayIt {
