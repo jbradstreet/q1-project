@@ -50,7 +50,7 @@ a {
 
 form {
   margin: 10px;
-  font-family: 'Special Elite', cursive;
+  /*font-family: 'Special Elite', cursive;*/
 }
 
 .midbuttons {
@@ -60,7 +60,7 @@ form {
 #revealIt {
   margin-top: 20px;
   width: 1000px;
-  height: 300px;
+  /*height: 300px;*/
   border: 1px solid black;
   background: #F4F4F4;
   /*font-family: 'Special Elite', cursive;*/

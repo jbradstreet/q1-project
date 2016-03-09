@@ -49,7 +49,7 @@ $(document).ready(function() {
               // capture data of section where I click "add it"
               $newRow.find('.addIt').click(function(event) {
                 storedData = $episodeOutput.clone();
-                $('#revealIt').append(storedData);
+                $('.appendHere').append(storedData);
 
 
               });
