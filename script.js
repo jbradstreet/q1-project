@@ -48,9 +48,10 @@ $(document).ready(function() {
 
               // capture data of section where I click "add it"
               $newRow.find('.addIt').click(function(event) {
-                var test = $(this).children('.episodeDetails');
-                storedData = value;
-                console.log(storedData);
+                storedData = $episodeOutput.clone();
+                $('#revealIt').append(storedData);
+
+
               });
 
             });
