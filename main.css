@@ -42,7 +42,7 @@ a {
   font-family: 'Special Elite', cursive;
   /*padding: 20px;*/
 }
- h3 {
+ .bodyHeader {
    font-family: 'Special Elite', cursive;
    /*color: #F4F4F4 !important;*/
    padding-top: 40px;
