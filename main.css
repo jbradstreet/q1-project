@@ -57,6 +57,13 @@ form {
   margin: 0px 5px 0px 5px;
 }
 
+#revealIt {
+  margin-top: 20px;
+  width: 1000px;
+  height: 300px;
+  border: 1px solid black;
+}
+
 #searchIt {
   margin-bottom: 20px;
   margin-left: 40px;
