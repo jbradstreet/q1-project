@@ -3,6 +3,7 @@ $(document).ready(function() {
   var userInput = '';
   var showIdNumber = '';
   var imageSource = '';
+  var storedData = '';
 
 
   $('#submitIt').click(function(e) {
@@ -25,36 +26,36 @@ $(document).ready(function() {
           url: 'http://api.tvmaze.com/shows/' + data.id + '/episodes',
           method: 'GET',
           success: function(episodeData) {
-
+            console.log(episodeData);
             // get the data I want to display
             $.each(episodeData, function(key, value) {
+              // make framework for data outpout
+              var $newRow = $('.row.template').clone().removeClass('template');
+              var $imageOutput = $newRow.find('.episodeImage');
 
-            // make framework for data outpout
-            var $newRow = $('.row.template').clone().removeClass('template');
-            var $imageOutput = $newRow.find('.episodeImage');
+              // next line works, errors out when calling shows with unreleased episodes.
+              $imageOutput.append($('<img src="' + value.image.medium + '">'));
 
-            $imageOutput.append($('<img src=' + value.image.medium + '>'));
+              var  $episodeOutput = $newRow.find('.episodeDetails');
 
-            var  $episodeOutput = $newRow.find('.episodeDetails');
+              $episodeOutput.append($('<h3>' + value.name + '</h3>'));
+              $episodeOutput.append($('<h5>' + 'Air date:' + ' ' + value.airdate + '</h5>'));
+              $episodeOutput.append($("<button type='submit' class='addIt'>" + 'Add it!' + '</button>'));
+              $episodeOutput.append($('<p>' + value.summary + '<p>'));
 
-            $episodeOutput.append($('<h3>' + value.name + '</h3>'));
-            $episodeOutput.append($('<h5>' + value.airdate + '</h5>'));
-            $episodeOutput.append($("<button type='submit' class='addIt'>" + 'Add it!' + '</button>'));
-            $episodeOutput.append($('<p>' + value.summary + '<p>'));
+              $('#displayIt').append($newRow);
 
-            $('#displayIt').append($newRow);
 
-            });
-
-            // populate My List on "add it" click with Episode Details
-            $('#addIt').click(function(event) {
-              event.preventDefault();
-
-              var holdEpDetails = '';
-
-              
+              // capture data of section where I click "add it"
+              $newRow.find('.addIt').click(function(event) {
+                var test = $(this).children('.episodeDetails');
+                storedData = value;
+                console.log(storedData);
+              });
 
             });
+
+
 
 
 
