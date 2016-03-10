@@ -61,6 +61,17 @@ form {
   margin: 0px 5px 0px 5px;
 }
 
+#searchIt {
+  margin-bottom: 20px;
+  margin-left: 40px;
+}
+
+
+.anotherTemplate {
+  padding-left: 50px;
+}
+
+
 #revealIt {
   margin-top: 20px;
   margin-bottom: 20px;
@@ -69,21 +80,8 @@ form {
   background: #F4F4F4;
   display: inline-block;
   float: right;
-  /*font-family: 'Special Elite', cursive;*/
-}
-
-.anotherTemplate {
-  padding-left: 250px;
-}
-
-
-#searchIt {
-  margin-bottom: 20px;
-  margin-left: 40px;
-}
-
-#revealIt {
   visibility: hidden;
+  /*font-family: 'Special Elite', cursive;*/
 }
 
 
@@ -91,6 +89,7 @@ form {
 #displayIt {
   /*min-height: 100px;*/
   /*height: auto;*/
+  margin-top: 20px;
   width: 1000px;
   border: 1px solid black;
   padding-top: 10px;
@@ -103,6 +102,7 @@ form {
 
 .episodeSection {
   margin-left: 90px;
+  padding-top: 15px;
 }
 
 .episodeImage {
