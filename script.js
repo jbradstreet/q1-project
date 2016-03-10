@@ -61,12 +61,8 @@ $(document).ready(function() {
                 });
                 $newRow.find('.addIt').off('click', clickHandler);
               }
-
               $newRow.find('.addIt').click(clickHandler);
-
-
             });
-
           }
         });
       },
