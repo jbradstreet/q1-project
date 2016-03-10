@@ -4,8 +4,6 @@ body {
   width: 2100px;
 }
 
-
-
 nav {
   background-color: #2888D4;
   padding: auto;
@@ -69,12 +67,12 @@ form {
 
 .anotherTemplate {
   padding-left: 50px;
+  overflow: hidden;
 }
 
 
 #revealIt {
   margin-top: 20px;
-  margin-bottom: 20px;
   margin-left: 1050px;
   width: 750px;
   border: 1px solid black;
@@ -89,8 +87,6 @@ form {
 
 
 #displayIt {
-  /*min-height: 100px;*/
-  /*height: auto;*/
   margin-top: 20px;
   width: 1000px;
   border: 1px solid black;
@@ -111,20 +107,13 @@ form {
 .episodeImage {
   height: 140px;
   width: 250px;
-  /*border: 1px solid black;*/
   position: relative;
 }
 
-.addIt {
-  /*position: absolute;
-  top: 17px;
-  left: 300px;*/
-}
 
 .episodeDetails {
   position: absolute;
   left: 300px;
-  /*height: 300px;*/
   width: 300px;
   margin-left: -270px;
   margin-bottom: 30px;

@@ -45,10 +45,11 @@ $(document).ready(function() {
               var $newRow = $('.row.template').clone().removeClass('template');
               var $imageOutput = $newRow.find('.episodeImage');
 
-              // next line works, errors out when calling shows with unreleased episodes.
+              // next line works, errors out when calling shows with unreleased episode images.
               $imageOutput.append($('<img src="' + value.image.medium + '">'));
 
               var  $episodeOutput = $newRow.find('.episodeDetails');
+
 
               $episodeOutput.append($('<h3>' + value.name + '</h3>'));
               $episodeOutput.append($('<h5>' + 'Air date:' + ' ' + value.airdate + '</h5>'));
@@ -57,9 +58,13 @@ $(document).ready(function() {
 
               $('#displayIt').append($newRow);
 
+
               var clickHandler = function(event) {
                 storedData = $episodeOutput.clone();
                 // $('.appendHere').append(storedData);
+
+                // change the column length to 10 instead of 6
+                storedData.attr('class', 'episodeDetails col-md-10');
 
                 var $newForm = $('.anotherTemplate.copy').clone().removeClass('copy');
 
