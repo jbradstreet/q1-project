@@ -134,16 +134,3 @@ form {
 .copy {
   display: none;
 }
-
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 60px;
-  padding-left: 490px;
-}
-
-.footer .centerIt {
-  text-align: center;
-  display: inline-block;
-}
