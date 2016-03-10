@@ -75,12 +75,14 @@ form {
 #revealIt {
   margin-top: 20px;
   margin-bottom: 20px;
-  width: 900px;
+  margin-left: 1050px;
+  width: 750px;
   border: 1px solid black;
   background: #F4F4F4;
   display: inline-block;
   float: right;
   visibility: hidden;
+  position: absolute;
   /*font-family: 'Special Elite', cursive;*/
 }
 
@@ -97,6 +99,7 @@ form {
   background: #F4F4F4;
   display: inline-block;
   float: left;
+  position: relative;
 
 }
 
