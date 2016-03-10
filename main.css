@@ -1,6 +1,7 @@
 body {
   background: #6CCFDA !important;
   padding: 70px;
+  width: 2100px;
 }
 
 
@@ -62,14 +63,16 @@ form {
 #revealIt {
   margin-top: 20px;
   margin-bottom: 20px;
-  width: 1000px;
+  width: 900px;
   border: 1px solid black;
   background: #F4F4F4;
+  display: inline-block;
+  float: right;
   /*font-family: 'Special Elite', cursive;*/
 }
 
 .anotherTemplate {
-  padding-left: 20px;
+  padding-left: 250px;
 }
 
 
@@ -82,6 +85,8 @@ form {
   visibility: hidden;
 }
 
+
+
 #displayIt {
   /*min-height: 100px;*/
   /*height: auto;*/
@@ -90,6 +95,8 @@ form {
   padding-top: 10px;
   visibility: hidden;
   background: #F4F4F4;
+  display: inline-block;
+  float: left;
 
 }
 
