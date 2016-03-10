@@ -4,7 +4,7 @@ $(document).ready(function() {
   var showIdNumber = '';
   var imageSource = '';
   var storedData = '';
-  var countClicks = 0;
+
 
   $.fn.scrollView = function () {
     return this.each(function () {
@@ -24,6 +24,9 @@ $(document).ready(function() {
 
     // make container for episode data visible !!!!
     $('#displayIt').css('visibility', 'visible');
+
+    // clear container of previous search
+    $('#displayIt .row:not(.template)').remove();
 
     $.ajax({
       url:'http://api.tvmaze.com/singlesearch/shows?q=' + userInput,
