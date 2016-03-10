@@ -6,6 +6,14 @@ $(document).ready(function() {
   var storedData = '';
   var countClicks = 0;
 
+  $.fn.scrollView = function () {
+    return this.each(function () {
+      $('html, body').animate({
+        scrollTop: $(this).offset().top
+      }, 1000);
+    });
+  }
+
 
   $('#submitIt').click(function(e) {
     // line 8 stops code from submitting the query and going away
@@ -70,16 +78,18 @@ $(document).ready(function() {
         console.log('error', data);
       }
     });
-
-
   });
 
   $('.myList, .midbuttons').click(function (something) {
     // something.preventDefault();
     // make container for My List visible !!!!
     $('#revealIt').css('visibility', 'visible');
+  });
 
+  $('#cornerButton').click(function (dothething) {
+    $('#revealIt').scrollView();
 
   });
+
 
 });

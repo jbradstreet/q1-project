@@ -119,6 +119,12 @@ form {
   background: white;
 }
 
+#cornerButton {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+}
+
 .template {
   display: none;
 }
