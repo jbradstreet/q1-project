@@ -64,7 +64,7 @@ $(document).ready(function() {
                 // $('.appendHere').append(storedData);
 
                 // change the column length to 10 instead of 6
-                storedData.attr('class', 'episodeDetails col-md-10');
+                storedData.attr('class', 'episodeDetails col-md-11');
 
                 var $newForm = $('.anotherTemplate.copy').clone().removeClass('copy');
 
