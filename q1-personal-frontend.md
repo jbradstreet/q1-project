@@ -57,8 +57,8 @@
   * [Codebase](link to git repo)
 
 * Jenni Bradstreet
-  * [name of project](deployed url)
-  * [Codebase](link to git repo)
+  * [What The Heck Am I Watching?](show-effort.surge.sh)
+  * [Codebase](https://github.com/jbradstreet/g21-projects)
 
 * Kay McKelly
   * [name of project](deployed url)
