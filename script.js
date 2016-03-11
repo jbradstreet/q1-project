@@ -14,6 +14,14 @@ $(document).ready(function() {
     });
   }
 
+  // work in progress - try to display saved list data when page loads
+  // function displayData() {
+  //   if (localStorage == true) {
+  //     $episodeOutput.append(saveData);
+  //   }
+  //
+  // }
+
 
   $('#submitIt').click(function(e) {
     // line 8 stops code from submitting the query and going away
@@ -66,6 +74,7 @@ $(document).ready(function() {
                 storedData.attr('class', 'episodeDetails col-md-11');
 
                 // use localStorage to save myList each time Add It is clicked
+                // the next line will get the saveData
                 var saveData = JSON.parse(localStorage.getItem('myList')) || [];
                 saveData.push(value);
                 console.log(saveData);
