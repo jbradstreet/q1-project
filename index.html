@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link href='https://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-
     <meta charset="utf-8">
     <title>What The *** Am I Watching?</title>
 
+    <link href='https://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link type="text/css" rel='stylesheet' href='main.css'/>
 
     <script src="https://code.jquery.com/jquery-2.2.1.js"></script>
@@ -20,12 +19,11 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
-
 	  <script src="script.js"></script>
 
   </head>
-  <body>
 
+  <body>
     <div class='conatiner'>
       <nav class='navbar navbar-fixed-top row'>
         <div class='col-md-6 col-md-offset-4'>
@@ -36,8 +34,12 @@
 
     <div class='container' id='topButtons'>
       <div class='row'>
-        <div class='col-md-2'><a class='btn btn-default' href='about.html'>About</a></div>
-        <div class='myList col-md-2'><a class='btn btn-default' href='#'>My List</a></div>
+        <div class='col-md-2'>
+          <a class='btn btn-default' href='about.html'>About</a>
+        </div>
+        <div class='myList col-md-2'>
+          <a class='btn btn-default' href='#'>My List</a>
+        </div>
       </div>
     </div>
 
@@ -46,33 +48,29 @@
 
         <div class='col-md-6 col-md-offset-1' id="middleSection">
           <h3 class='bodyHeader'>What are you watching?</h3>
-
           <form action='index.html' method='get'>
-            <input type='text' name='q' id='searchIt' autofocus="true"></input><br>
+            <input type='text' name='q' id='searchIt' autofocus /><br>
             <button class='midbuttons' type='submit' value='submit' id='submitIt'>SUBMIT!</button>
             <!-- <button class='midbuttons' type='submit'>Popular</button>
             <button class='midbuttons' type='submit'>Trending</button> -->
           </form>
-
         </div>
       </div>
     </div>
 
     <div class='container' id='revealIt'>
-
       <div class='row'>
         <article class='col-md-10'>
           <h3>This is your list!</h3>
           <p>Description about this section goes here!</p><br>
-
           <div class='anotherTemplate copy row'>
-            <input class='targetInput' type='checkbox' name='descriptionHere' ></input>
+            <input class='targetInput' type='checkbox' name='descriptionHere' />
             <p class='appendHere'></p>
           </div>
         </article>
       </div>
     </div>
-
+    
     <div class='container' id='displayIt'>
       <div class='row template'>
         <article class='episodeSection col-md-12'>
