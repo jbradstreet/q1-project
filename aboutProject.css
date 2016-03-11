@@ -25,14 +25,14 @@ navbar {
 }
 
 #middleSection {
-  font-family: 'Special Elite', cursive;
+  font-family: 'Cabin Sketch', cursive;
   margin-top: 20px;
-  margin-left: 230px;
+  margin-left: 170px;
 }
 
 #topButtons {
   margin-top: 30px;
-  margin-left: 650px;
+  margin-left: 630px;
 }
 
 a {
@@ -49,43 +49,6 @@ a {
    font-family: 'Special Elite', cursive;
  }
 
-form {
-  margin: 10px;
-  font-family: 'Special Elite', cursive;
-}
-
-.midbuttons {
-  margin: 0px 5px 0px 5px;
-}
-
-#searchIt {
-  margin-bottom: 10px;
-  margin-left: 40px;
-}
-
-#displayIt {
-  /*min-height: 100px;*/
-  /*height: auto;*/
-  width: 1000px;
-  border: 1px solid black;
-  padding-top: 10px;
-  visibility: hidden;
-
-}
-
-.episodeSection {
-  margin-left: 90px;
-}
-
-.episodeImage {
-  height: 140px;
-  width: 250px;
-  /*border: 1px solid black;*/
-  position: relative;
-}
-
-.addIt {
-  /*position: absolute;
-  top: 17px;
-  left: 300px;*/
-}
+ p {
+   font-family: 'Cabin Sketch', cursive;
+ }
