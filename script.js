@@ -109,10 +109,19 @@ $(document).ready(function() {
           $listEpisodeOutput.append($('<h5>' + 'Air date:' + ' ' + listValue.airdate + '</h5>'));
           $listEpisodeOutput.append($('<p>' + value.summary + '<p>'));
 
-          console.log($anotherForm);
-          return $('#revealIt article').append($anotherForm);
-        });
+          var $yetAnotherForm = $('.anotherTemplate.copy').clone().removeClass('copy');
 
+          $('#revealIt article').append($anotherForm);
+            var savedListData = $listEpisodeOutput.clone();
+            
+            $anotherForm.find('p').append(savedListData);
+            $newForm.find('input').click(function() {
+              $newForm.remove();
+            });
+
+          console.log($yetAnotherForm);
+          return $('#revealIt article').append($yetAnotherForm);
+        });
       }
     })();
 
