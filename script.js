@@ -106,17 +106,17 @@ $(document).ready(function() {
           var $listEpisodeOutput = $anotherForm.find('.episodeDetails');
 
           $listEpisodeOutput.append($('<h3>' + value.name + '</h3>'));
-          $listEpisodeOutput.append($('<h5>' + 'Air date:' + ' ' + listValue.airdate + '</h5>'));
+          $listEpisodeOutput.append($('<h5>' + 'Air date:' + ' ' + value.airdate + '</h5>'));
           $listEpisodeOutput.append($('<p>' + value.summary + '<p>'));
 
           var $yetAnotherForm = $('.anotherTemplate.copy').clone().removeClass('copy');
 
           $('#revealIt article').append($anotherForm);
             var savedListData = $listEpisodeOutput.clone();
-            
+
             $anotherForm.find('p').append(savedListData);
-            $newForm.find('input').click(function() {
-              $newForm.remove();
+            $anotherForm.find('input').click(function() {
+              $anotherForm.remove();
             });
 
           console.log($yetAnotherForm);
