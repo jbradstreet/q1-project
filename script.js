@@ -12,14 +12,6 @@ $(document).ready(function() {
     });
   };
 
-  // work in progress - try to display saved list data when page loads
-  // function displayData() {
-  //   if (localStorage == true) {
-  //     $episodeOutput.append(saveData);
-  //   }
-  //
-  // }
-
   $('#submitIt').click(function(e) {
     e.preventDefault();
 
@@ -99,6 +91,27 @@ $(document).ready(function() {
     // something.preventDefault();
     // make container for My List visible !!!!
     $('#revealIt').css('visibility', 'visible');
+
+    // work in progress - try to display saved list data when page loads
+    (function displayData() {
+      if (JSON.stringify(localStorage.getItem('myList')) !== 'undefined' && JSON.stringify(localStorage.getItem('myList')) !== null) {
+
+        var listValue = JSON.stringify(localStorage.getItem('myList'));
+        console.log(listValue);
+
+        // build a new form template to throw myList into.
+        var $anotherForm = $('.row.template').clone().removeClass('template');
+        var $listEpisodeOutput = $anotherForm.find('.episodeDetails');
+
+        $listEpisodeOutput.append($('<h3>' + listValue.name + '</h3>'));
+        $listEpisodeOutput.append($('<h5>' + 'Air date:' + ' ' + listValue.airdate + '</h5>'));
+        $listEpisodeOutput.append($('<p>' + listValue.summary + '<p>'));
+
+        console.log($anotherForm);
+        return $('#revealIt article').append($anotherForm);
+      }
+    })();
+
   });
 
   $('#cornerButton').click(function() {
