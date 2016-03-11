@@ -47,7 +47,7 @@ a {
  .bodyHeader {
    font-family: 'Special Elite', cursive;
    /*color: #F4F4F4 !important;*/
-   padding-top: 40px;
+   padding-top: 30px;
  }
 
 form {
@@ -61,15 +61,14 @@ form {
 
 #searchIt {
   margin-bottom: 20px;
-  margin-left: 40px;
+  margin-left: 55px;
+  font-family: 'Cabin Sketch', cursive;
 }
-
 
 .anotherTemplate {
   padding-left: 50px;
   overflow: hidden;
 }
-
 
 #revealIt {
   margin-top: 20px;
@@ -81,10 +80,7 @@ form {
   float: right;
   visibility: hidden;
   position: absolute;
-  /*font-family: 'Special Elite', cursive;*/
 }
-
-
 
 #displayIt {
   margin-top: 20px;
@@ -96,7 +92,6 @@ form {
   display: inline-block;
   float: left;
   position: relative;
-
 }
 
 .episodeSection {
@@ -109,7 +104,6 @@ form {
   width: 250px;
   position: relative;
 }
-
 
 .episodeDetails {
   position: absolute;
