@@ -1,8 +1,6 @@
 body {
   background: #6CCFDA!important;
-
 }
-
 
 nav {
   background-color: #2888D4;
@@ -21,7 +19,6 @@ navbar {
   height: 300px;
   width: 100%;
   text-align: center;
-
 }
 
 #middleSection {
@@ -43,8 +40,8 @@ a {
   padding-top: 10px;
   text-decoration: none;
   font-family: 'Special Elite', cursive;
-  /*padding: 20px;*/
 }
+
  h3 {
    font-family: 'Special Elite', cursive;
  }
