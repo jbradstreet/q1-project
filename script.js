@@ -59,7 +59,6 @@ $(document).ready(function() {
               $('#displayIt').append($newRow);
 
               var clickHandler = function() {
-
                 storedData = $episodeOutput.clone();
 
                 // change the column length to 10 instead of 6
@@ -69,7 +68,8 @@ $(document).ready(function() {
                 // the next line will get the saveData
                 var saveData = JSON.parse(localStorage.getItem('myList')) || [];
                 saveData.push(value);
-                console.log(saveData);
+
+                // console.log(saveData);
                 localStorage.setItem('myList', JSON.stringify(saveData));
 
                 var $newForm = $('.anotherTemplate.copy').clone().removeClass('copy');
@@ -78,32 +78,30 @@ $(document).ready(function() {
                 $newForm.find('p').append(storedData);
                 $newForm.find('input').click(function() {
                   $newForm.remove();
-                  // add this next line to allow same episode to be clicked again
+
+                  // next line to allows same episode to be clicked again
                   $newRow.find('.addIt').click(clickHandler);
                 });
                 $newRow.find('.addIt').off('click', clickHandler);
-              }
+              };
               $newRow.find('.addIt').click(clickHandler);
             });
           }
         });
       },
-      error: function (data) {
+      error: function(data) {
         console.log('error', data);
       }
     });
   });
 
-  $('.myList, .midbuttons').click(function (something) {
+  $('.myList, .midbuttons').click(function() {
     // something.preventDefault();
     // make container for My List visible !!!!
     $('#revealIt').css('visibility', 'visible');
   });
 
-  $('#cornerButton').click(function (dothething) {
+  $('#cornerButton').click(function() {
     $('#revealIt').scrollView();
-
   });
-
-
 });
