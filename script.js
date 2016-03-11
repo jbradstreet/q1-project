@@ -24,11 +24,9 @@ $(document).ready(function() {
 
 
   $('#submitIt').click(function(e) {
-    // line 8 stops code from submitting the query and going away
     e.preventDefault();
 
     userInput = $('#searchIt').val();
-    console.log(userInput);
 
     // make container for episode data visible !!!!
     $('#displayIt').css('visibility', 'visible');
@@ -58,14 +56,12 @@ $(document).ready(function() {
 
               var  $episodeOutput = $newRow.find('.episodeDetails');
 
-
               $episodeOutput.append($('<h3>' + value.name + '</h3>'));
               $episodeOutput.append($('<h5>' + 'Air date:' + ' ' + value.airdate + '</h5>'));
               $episodeOutput.append($("<button type='submit' class='addIt'>" + 'Add it!' + '</button>'));
               $episodeOutput.append($('<p>' + value.summary + '<p>'));
 
               $('#displayIt').append($newRow);
-
 
               var clickHandler = function(event) {
                 storedData = $episodeOutput.clone();
@@ -79,9 +75,6 @@ $(document).ready(function() {
                 saveData.push(value);
                 console.log(saveData);
                 localStorage.setItem('myList', JSON.stringify(saveData));
-
-                // var testRetreive = localStorage.getItem('saveData');
-                // saveData = JSON.parse(testRetreive);
 
                 var $newForm = $('.anotherTemplate.copy').clone().removeClass('copy');
 
@@ -104,7 +97,7 @@ $(document).ready(function() {
       }
     });
   });
-
+  
   $('.myList, .midbuttons').click(function (something) {
     // something.preventDefault();
     // make container for My List visible !!!!
