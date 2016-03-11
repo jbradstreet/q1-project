@@ -61,10 +61,18 @@ $(document).ready(function() {
 
               var clickHandler = function(event) {
                 storedData = $episodeOutput.clone();
-                // $('.appendHere').append(storedData);
 
                 // change the column length to 10 instead of 6
                 storedData.attr('class', 'episodeDetails col-md-11');
+
+                // use localStorage to save myList each time Add It is clicked
+                var saveData = JSON.parse(localStorage.getItem('myList')) || [];
+                saveData.push(value);
+                console.log(saveData);
+                localStorage.setItem('myList', JSON.stringify(saveData));
+
+                // var testRetreive = localStorage.getItem('saveData');
+                // saveData = JSON.parse(testRetreive);
 
                 var $newForm = $('.anotherTemplate.copy').clone().removeClass('copy');
 
