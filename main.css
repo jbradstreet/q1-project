@@ -31,7 +31,6 @@ navbar {
 
 #topButtons {
   margin-top: 30px;
-
 }
 
 a {
@@ -56,7 +55,7 @@ form {
 }
 
 .midbuttons {
-  margin: 0px 5px 0px 5px;
+  margin: 0px 5px 0px 90px;
 }
 
 #searchIt {
