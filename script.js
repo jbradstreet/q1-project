@@ -1,18 +1,16 @@
 $(document).ready(function() {
+  'use strict';
 
   var userInput = '';
-  var showIdNumber = '';
-  var imageSource = '';
   var storedData = '';
 
-
-  $.fn.scrollView = function () {
-    return this.each(function () {
+  $.fn.scrollView = function() {
+    return this.each(function() {
       $('html, body').animate({
         scrollTop: $(this).offset().top
       }, 1000);
     });
-  }
+  };
 
   // work in progress - try to display saved list data when page loads
   // function displayData() {
@@ -21,7 +19,6 @@ $(document).ready(function() {
   //   }
   //
   // }
-
 
   $('#submitIt').click(function(e) {
     e.preventDefault();
@@ -35,26 +32,24 @@ $(document).ready(function() {
     $('#displayIt .row:not(.template)').remove();
 
     $.ajax({
-      url:'http://api.tvmaze.com/singlesearch/shows?q=' + userInput,
+      url: 'http://api.tvmaze.com/singlesearch/shows?q=' + userInput,
       method: 'GET',
       success: function(data) {
-
         // add tv show id to another api search
         $.ajax({
           url: 'http://api.tvmaze.com/shows/' + data.id + '/episodes',
           method: 'GET',
           success: function(episodeData) {
-            console.log(episodeData);
             // get the data I want to display
             $.each(episodeData, function(key, value) {
               // make framework for data outpout
               var $newRow = $('.row.template').clone().removeClass('template');
               var $imageOutput = $newRow.find('.episodeImage');
 
-              // next line works, errors out when calling shows with unreleased episode images.
+              // errors out when calling shows without images.
               $imageOutput.append($('<img src="' + value.image.medium + '">'));
 
-              var  $episodeOutput = $newRow.find('.episodeDetails');
+              var $episodeOutput = $newRow.find('.episodeDetails');
 
               $episodeOutput.append($('<h3>' + value.name + '</h3>'));
               $episodeOutput.append($('<h5>' + 'Air date:' + ' ' + value.airdate + '</h5>'));
@@ -63,7 +58,8 @@ $(document).ready(function() {
 
               $('#displayIt').append($newRow);
 
-              var clickHandler = function(event) {
+              var clickHandler = function() {
+
                 storedData = $episodeOutput.clone();
 
                 // change the column length to 10 instead of 6
