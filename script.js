@@ -97,7 +97,7 @@ $(document).ready(function() {
       }
     });
   });
-  
+
   $('.myList, .midbuttons').click(function (something) {
     // something.preventDefault();
     // make container for My List visible !!!!
