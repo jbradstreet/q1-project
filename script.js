@@ -92,7 +92,7 @@ $(document).ready(function() {
     // make container for My List visible !!!!
     $('#revealIt').css('visibility', 'visible');
 
-    // work in progress - try to display saved list data when page loads
+    // displays saved list data when page loads
     (function displayData() {
 
       if (JSON.parse(localStorage.getItem('myList')) !== 'undefined' && JSON.parse(localStorage.getItem('myList')) !== null) {
@@ -117,6 +117,9 @@ $(document).ready(function() {
             $yetAnotherForm.find('p').append(savedListData);
             $yetAnotherForm.find('input').click(function() {
               $yetAnotherForm.remove();
+              // WORK IN PROGRESS - need to remove selected item from localStorage
+              localStorage.removeItem(listValue);
+
             });
 
           console.log($yetAnotherForm);
