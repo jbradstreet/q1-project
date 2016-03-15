@@ -93,41 +93,39 @@ $(document).ready(function() {
     $('#revealIt').css('visibility', 'visible');
 
     // work in progress - try to display saved list data when page loads
-    // (function displayData() {
-    //
-    //   if (JSON.parse(localStorage.getItem('myList')) !== 'undefined' && JSON.parse(localStorage.getItem('myList')) !== null) {
-    //
-    //     var listValue = JSON.parse(localStorage.getItem('myList'));
-    //     console.log(listValue);
-    //
-    //     $.each(listValue, function(key, value) {
-    //       // build a new form template to throw myList into.
-    //       var $anotherForm = $('.row.template').clone().removeClass('template');
-    //       var $listEpisodeOutput = $anotherForm.find('.episodeDetails');
-    //
-    //       $listEpisodeOutput.append($('<h3>' + value.name + '</h3>'));
-    //       $listEpisodeOutput.append($('<h5>' + 'Air date:' + ' ' + value.airdate + '</h5>'));
-    //       $listEpisodeOutput.append($('<p>' + value.summary + '<p>'));
-    //
-    //       var $yetAnotherForm = $('.anotherTemplate.copy').clone().removeClass('copy');
-    //
-    //       $('#revealIt article').append($anotherForm);
-    //         var savedListData = $listEpisodeOutput.clone();
-    //
-    //         $anotherForm.find('p').append(savedListData);
-    //         $anotherForm.find('input').click(function() {
-    //           $anotherForm.remove();
-    //         });
-    //
-    //       console.log($yetAnotherForm);
-    //       return $('#revealIt article').append($yetAnotherForm);
-    //     });
-    //   }
-    // })();
+    (function displayData() {
+
+      if (JSON.parse(localStorage.getItem('myList')) !== 'undefined' && JSON.parse(localStorage.getItem('myList')) !== null) {
+
+        var listValue = JSON.parse(localStorage.getItem('myList'));
+        console.log(listValue);
+
+        $.each(listValue, function(key, value) {
+          // build a new form template to throw myList into.
+          var $anotherForm = $('.row.template').clone().removeClass('template');
+          var $listEpisodeOutput = $anotherForm.find('.episodeDetails');
+
+          $listEpisodeOutput.append($('<h3>' + value.name + '</h3>'));
+          $listEpisodeOutput.append($('<h5>' + 'Air date:' + ' ' + value.airdate + '</h5>'));
+          $listEpisodeOutput.append($('<p>' + value.summary + '<p>'));
+
+          var $yetAnotherForm = $('.anotherTemplate.copy').clone().removeClass('copy');
+
+          $('#revealIt article').append($yetAnotherForm);
+            var savedListData = $listEpisodeOutput.clone();
+
+            $yetAnotherForm.find('p').append(savedListData);
+            $yetAnotherForm.find('input').click(function() {
+              $yetAnotherForm.remove();
+            });
+
+          console.log($yetAnotherForm);
+          return $('#revealIt article').append($yetAnotherForm);
+        });
+      }
+    })();
 
   });
 
-  $('#cornerButton').click(function() {
-    $('#revealIt').scrollView();
-  });
+
 });
