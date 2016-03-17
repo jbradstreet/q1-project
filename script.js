@@ -88,7 +88,6 @@ $(document).ready(function() {
   });
 
   $('.myList, .midbuttons').click(function() {
-    // something.preventDefault();
     // make container for My List visible !!!!
     $('#revealIt').css('visibility', 'visible');
 
@@ -118,7 +117,8 @@ $(document).ready(function() {
             $yetAnotherForm.find('input').click(function() {
               $yetAnotherForm.remove();
               // WORK IN PROGRESS - need to remove selected item from localStorage
-              localStorage.removeItem(listValue);
+              $(this).closest('div').attr('key');
+              localStorage.removeItem('myList');
 
             });
 
