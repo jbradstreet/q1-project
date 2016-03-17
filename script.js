@@ -38,8 +38,10 @@ $(document).ready(function() {
               var $newRow = $('.row.template').clone().removeClass('template');
               var $imageOutput = $newRow.find('.episodeImage');
 
+              if (value.image != null) {
               // errors out when calling shows without images.
               $imageOutput.append($('<img src="' + value.image.medium + '">'));
+              }
 
               var $episodeOutput = $newRow.find('.episodeDetails');
 
