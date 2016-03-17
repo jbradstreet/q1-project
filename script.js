@@ -99,7 +99,7 @@ $(document).ready(function() {
         var listValue = JSON.parse(localStorage.getItem('myList'));
         console.log(listValue);
 
-        $.each(listValue, function(key, value) {
+        $.each(listValue, function(index, value) {
           // build a new form template to throw myList into.
           var $anotherForm = $('.row.template').clone().removeClass('template');
           var $listEpisodeOutput = $anotherForm.find('.episodeDetails');
@@ -111,16 +111,29 @@ $(document).ready(function() {
           var $yetAnotherForm = $('.anotherTemplate.copy').clone().removeClass('copy');
 
           $('#revealIt article').append($yetAnotherForm);
-            var savedListData = $listEpisodeOutput.clone();
+          var savedListData = $listEpisodeOutput.clone();
 
-            $yetAnotherForm.find('p').append(savedListData);
-            $yetAnotherForm.find('input').click(function() {
-              $yetAnotherForm.remove();
-              // WORK IN PROGRESS - need to remove selected item from localStorage
-              $(this).closest('div').attr('key');
-              localStorage.removeItem('myList');
+          $yetAnotherForm.find('p').append(savedListData);
+          $yetAnotherForm.find('input').id = index;
+          $yetAnotherForm.find('input').click(function() {
+            $yetAnotherForm.remove();
+            // WORK IN PROGRESS - need to remove selected item from localStorage
+            // $(this).closest('div').attr('index');
 
-            });
+            // get myList from localstorage
+            // unserialize myList string into a native JS array
+            var myList = JSON.parse(localStorage.getItem('myList'));
+
+            // read the id / index of the input
+            var id = this.id;
+
+            // remove the correct element from the array Arraty#splice(id, 1)
+            myList.splice(id, 1);
+
+            // serialize the array back to a JSON string
+            // set myList in localstorage with the serialized string
+            localStorage.setItem('myList', JSON.stringify(myList));
+          });
 
           console.log($yetAnotherForm);
           return $('#revealIt article').append($yetAnotherForm);
