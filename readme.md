@@ -1,16 +1,7 @@
-# G21 Projects
+# About My Project
 
-* Q1 - [Personal Frontend Projects](./q1-personal-frontend.md)
+There are a LOT of fun TV shows out there. Every once in a while, life gets busy, you fall behind on your favorite shows, and suddenly you forget what episode you're at. Well, thats where my wonderful web app comes in to save the day!
 
-### How to update your project's URL
+Welcome to my first web app - "What The Heck Am I Watching?"! Users can search for a TV show, add episodes they haven't seen to a list, and remove episodes they have seen from their list. All TV show data is obtained using the TVMaze API, which also means that I  used JavaScript/jQuery to move data around and to make the website interactive. In addition, the user's episode list is saved through local Storage. For the website's style, bootstrap was used along with some adjustments in the css file. There is a gif image in the About section, which I included for funsies.
 
-* Fork, clone
-* Find your name and edit that line like follows:
-
-  ```md
-  * Your name
-    * [name of project](url)
-    * [Codebase](github repo url)
-  ```
-
-* Commit, push, and submit a pull request
+Thanks for checking out my project!
