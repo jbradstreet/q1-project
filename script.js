@@ -142,23 +142,7 @@ $(document).ready(function() {
       }
     })();
   });
-
-  // $('.targetInput').click(function() {
-  //   this.remove();
-  //
-  //   // get myList from localstorage
-  //   // unserialize myList string into a native JS array
-  //   var myList = JSON.parse(localStorage.getItem('myList'));
-  //
-  //   // read the id / index of the input
-  //   var id = this.id;
-  //
-  //   // remove the correct element from the array Arraty#splice(id, 1)
-  //   myList.splice(id, 1);
-  //
-  //   // serialize the array back to a JSON string
-  //   // set myList in localstorage with the serialized string
-  //   localStorage.setItem('myList', JSON.stringify(myList));
-  // });
-
+  $('#cornerButton').click(function() {
+    $('#revealIt').scrollView();
+  });
 });
