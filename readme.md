@@ -1,4 +1,4 @@
-# About My Project
+# About My Project - "What The Heck Am I Watching?"
 
 There are a LOT of fun TV shows out there. Every once in a while, life gets busy, you fall behind on your favorite shows, and suddenly you forget what episode you're at. Well, thats where my wonderful web app comes in to save the day!
 
@@ -8,4 +8,4 @@ YouTube video explaining my project: https://youtu.be/AKTyLZ2DCgQ
 
 Link to my project: http://show-effort.surge.sh/
 
-Thanks for checking out my project!
+
