@@ -6,6 +6,6 @@ Welcome to my first web app - "What The Heck Am I Watching?"! Users can search f
 
 YouTube video explaining my project: https://youtu.be/AKTyLZ2DCgQ
 
-Link to my project: http://show-effort.surge.sh/
+Link to my project: http://wthamiwatching.surge.sh/
 
 
